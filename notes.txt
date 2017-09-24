@@ -1,0 +1,38 @@
+
+It seems all coins run a certain course:
+1: start low, peak early and then fall to nothing
+2: start high, drop to nothing and then peak some time in the future (sometimes months later)
+
+Coins may also get a little boost if links are added.
+ - ie in the case of linx, an announcement link was added and the coin rose by about 300%
+after remaining flat for quite some time (about 2 weeks)
+ - Should be able to take advantage of this
+
+
+ By far the best method for now is to get in early for new coins,
+ Almost every coin that starts @ around 10sats or less with make a good peak
+
+
+Alert values are given as a percentage increase/decrease
+
+LOSS IS PERCENTAGE LOSS
+eg
+buy @ 1
+profitThresholdPercentage of 150 will alert @ 1.5
+lossThresholdPercentage of 80 will alert @ 0.8
+
+
+
+
+
+DB STATS
+
+init db size:
+1,633,744 bytes (2.6 MB on disk) for 316 items
+
+updated db size: (2 entries)
+2,267,896 bytes (2.6 MB on disk) for 316 items
+
+Worst case increase of 2MB per half hour:
++ 672MB per week
++ 35GB per year
