@@ -154,9 +154,14 @@ def getCurrenciesNowTradingAtOneSat():
             sys.stdout.flush()
 
             lastAverageTradeVal = currency["Data"][-1]
-            if currency["Data"][-1]["LastPrice"] == "0.00000001" and currency["Data"][-2]["LastPrice"] != "0.00000001":
+            app = True
+            for entry in currency["Data"][-5:-2]:
+                if entry["LastPrice"] == "0.00000001":
+                    app = False
+                    break
+            if currency["Data"][-1]["LastPrice"] == "0.00000001" and app:
                 ret.append(currency["MarketAssetCode"])
-                print currency["MarketAssetCode"] + " - LastPrice=" + currency["Data"][-1]["LastPrice"] + " Second last LastPrice=" + currency["Data"][-2]["LastPrice"]
+                #print currency["MarketAssetCode"] + " - LastPrice=" + currency["Data"][-1]["LastPrice"] + " Second last LastPrice=" + currency["Data"][-2]["LastPrice"]
     return ret
 
 
