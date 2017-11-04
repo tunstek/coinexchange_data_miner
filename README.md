@@ -1,7 +1,6 @@
 
 
-**** NOTE ****
+# Setup
 
-THIS HAS STOPPED WORKING DUE TO coinexchange.io SECURITY CHANGES
-
-- I will attempt a fix as soon as I can
+Create a file named "send_email_config.py" and insert email credentials
+ - See send_email_config_example.py for an example
