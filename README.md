@@ -3,7 +3,9 @@ This was originally just an alert emailer before being upgraded to a data miner
 
 # Setup
 
-Run coinexchange_miner.py
+Run "python coinexchange_miner.py"
+
+- For optional arguments run "python coinexchange_miner.py -h"
 
 #### For email alerts:
 Create a file named "send_email_config.py" and insert email credentials
