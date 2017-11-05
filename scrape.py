@@ -185,7 +185,7 @@ def getCurrenciesNowTradingAtOneSat():
  #       except Exception, e:
  #           print "Err: could not load json data from file:" + filename + " - " + str(e)
             #return -1
-        
+
  #   return currencies
 #def getDBLen():
 #    root='data'
@@ -206,7 +206,7 @@ def getCurrenciesNowTradingAtOneSat():
  #               return -1
 #		i=i+1
 #	print "Err: index out of bounds: " + str(index)
-#	return -1    
+#	return -1
 def getDBFilenames():
     root='data'
     filenames = [f for f in os.listdir(root) if os.path.isfile(os.path.join(root, f))]
@@ -227,7 +227,7 @@ def getDBEntry(filename):
         except Exception, e:
             print "Failed to load bkup file! - " + str(e)
 
-    return -1    
+    return -1
 
 def updateDB(newCurrencies):
     bitcoinMarket = getBitcoinTradingMarket()
@@ -246,7 +246,7 @@ def updateDB(newCurrencies):
                         break
             if update:
                 updateCurrencyInDB(currency["MarketAssetCode"],bitcoinMarket)
-    
+
 
 def getCurrencyFromDB(currencyCode):
     filename = "data/"+currencyCode+".json"
@@ -314,7 +314,7 @@ def updateCurrencyInDB(currencyCode, bitcoinMarket):
         return
 
     filename = "data/" + currencyCode + ".json"
-    
+
     with open(filename) as data_file:
             currency = json.load(data_file)
 
