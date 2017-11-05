@@ -153,9 +153,8 @@ def getCurrenciesNowTradingAtOneSat():
             sys.stdout.write('%s \r' % (currency["MarketAssetCode"],))
             sys.stdout.flush()
 
-            lastAverageTradeVal = currency["Data"][-1]
             app = True
-            for entry in currency["Data"][-5:-2]:
+            for entry in currency["Data"][-21:-2]:
                 if entry["LastPrice"] == "0.00000001":
                     app = False
                     break
