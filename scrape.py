@@ -220,11 +220,18 @@ def getDBEntry(filename):
         print "Err: could not load json data from file:" + filename + " - " + str(e)
         print "Reverting to bkup.."
         try:
-            with open("data/"+filename) as data_file:
+            with open("data/"+filename+".bk") as data_file:
                 data = json.load(data_file)
                 return data
         except Exception, e:
             print "Failed to load bkup file! - " + str(e)
+            print "Deleting corrupted data.."
+            try:
+                os.remove("data/"+filename)
+                os.remove("data/"+filename+".bk")
+            except:
+                pass
+
 
     return -1
 
